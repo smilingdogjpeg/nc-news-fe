@@ -1,0 +1,56 @@
+.articles-container {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.articles-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.articles-list {
+    list-style: none;
+    padding: 0;
+}
+
+.article-card {
+    border: 1px solid #535353;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #bae6be;
+}
+
+.article-title {
+    font-weight: bold;
+      color: #666;;
+}
+
+.article-author {
+      color: #666;;
+}
+
+.article-comments {
+      color: #666;
+}
+
+.article-date {
+    color: #666;
+}
+
+.article-topic {
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+      color: #666;
+}
+
+.article-votes {
+     color: #666;;
+    font-weight: bold;
+}
+
+.loading {
+    color: orange;
+    font-style: italic;
+}
