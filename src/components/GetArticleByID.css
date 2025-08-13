@@ -1,0 +1,46 @@
+.comment-container {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-card {
+    border: 1px solid #535353;
+    border-radius: 9px;
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 0rem;
+    margin-bottom: 1rem;
+    background-color: #bae6d4;
+}
+
+.comment-author {
+    color: #135a50;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.comment-body {
+    color: #141414;
+    font-size: 1.2rem;
+}
+
+.comment-date {
+    color: #135a50;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.comment-votes {
+    color: #666;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.article-body {
+    font-size: 1.3rem;
+}

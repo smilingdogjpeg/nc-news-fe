@@ -16,38 +16,46 @@
 
 .article-card {
     border: 1px solid #535353;
-    border-radius: 6px;
+    border-radius: 9px;
     padding: 1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin-bottom: 1rem;
     background-color: #bae6be;
 }
 
 .article-title {
+    font-size: 1.8rem;
     font-weight: bold;
-      color: #666;;
+    color: #666;
+    text-wrap: pretty;
+    padding: 2rem;
 }
 
 .article-author {
-      color: #666;;
+    color: #666;
+    font-size: 1.5rem;
 }
 
 .article-comments {
-      color: #666;
+    color: #666;
 }
 
 .article-date {
     color: #666;
+    font-size: 1.5rem;
 }
 
 .article-topic {
+    font-size: 1.2rem;
+    font-weight: bold;
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
-      color: #666;
+    color: #666;
 }
 
 .article-votes {
-     color: #666;;
-    font-weight: bold;
+    color: #666;
 }
 
 .loading {

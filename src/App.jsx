@@ -1,19 +1,19 @@
 import './App.css'
 import Header from './components/Header'
 import GetArticles from './components/GetArticles'
+import GetArticleByID from './components/GetArticleByID'
 import { Routes, Route } from 'react-router-dom'
-import ArticlesButton from './components/homepage-options/ArticlesButton'
-
+import NavBar from './components/NavBar'
 
 const App = () => {
-console.log("Hellooo")
 
   return (
     <div>
       <Header />
+      <NavBar />
       <Routes>
-        <Route path="/articles" element={<GetArticles />} />
-        <Route path="/" element={<ArticlesButton />} />
+        <Route path="/" element={<GetArticles />} />
+        <Route path="/articles/:article_id" element={<GetArticleByID />} />
       </Routes>
     </div>
   )
