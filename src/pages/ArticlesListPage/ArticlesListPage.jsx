@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
-import './GetArticles.css'
+import './ArticlesListPage.css'
 import { Link } from "react-router-dom";
-import { formatDate } from "../utils";
+import { formatDate } from "../../utils";
 
-function GetArticles() {
+function ArticlesListPage() {
     const [articles, setArticles] = useState([])
 
     useEffect(() => {
@@ -16,7 +16,7 @@ function GetArticles() {
     }, [])
 
 
-    if (!articles.length) return <p>Loading...</p>;
+    if (!articles.length) return <p className="loading">Loading...</p>;
 
     return (
         <div className="articles-container">
@@ -48,4 +48,4 @@ function GetArticles() {
 
 }
 
-export default GetArticles
+export default ArticlesListPage

@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { formatDate } from "../utils";
-import './GetArticleByID.css'
+import { formatDate } from "../../utils";
+import './ArticlePage.css'
+import Voter from "../../components/Voter";
+import AddComment from "../../components/AddComment";
 
-function GetArticleByID() {
+function ArticlePage() {
     const { article_id } = useParams()
     const [article, setArticle] = useState([])
     const [comments, setComments] = useState([])
@@ -26,7 +28,7 @@ function GetArticleByID() {
             })
     }, [article_id])
 
-    if (loading) return <p>Loading...</p>
+    if (loading) return <p className="loading">Loading...</p>
 
     const formattedArticleDate = formatDate(article.created_at)
 
@@ -37,17 +39,19 @@ function GetArticleByID() {
                 <h1>{article.title}</h1>
                 <h2>in: {article.topic} <br />
                     {article.author} | {formattedArticleDate} <br />
-                    Comments: {comments.length} | Votes: {article.votes}
+                    
                 </h2>
                 <img
                     src={article.article_img_url}
                     alt={article.title}
                     style={{ maxWidth: '600px' }}
                 /><br />
-                <span className="article-body">{article.body}</span>
+                <span className="article-body">{article.body}</span> <br />
+                <Voter id={article.article_id} type="articles" votes={article.votes} />
             </div>
             <div className="comment-container">
-                <h3>Comments</h3>
+                <h3>Comments: {comments.length}</h3>
+                {/* <AddComment setComments={setComments}/>  */}
                 <ul className="comment-list">
                     {comments.map((comment) => {
                         const formattedCommentDate = formatDate(comment.created_at)
@@ -56,7 +60,7 @@ function GetArticleByID() {
                                 <span className="comment-date">[{formattedCommentDate}] </span> <br />
                                 <span className="comment-author">{comment.author} said: </span>
                                 <span className="comment-body">{comment.body}</span><br />
-                                <span className="comment-votes">Votes: {comment.votes}</span>
+                                <Voter id={comment.comment_id} type="comments" votes={comment.votes} />
                             </li>
                         )
                     })}
@@ -68,4 +72,4 @@ function GetArticleByID() {
 
 }
 
-export default GetArticleByID
+export default ArticlePage

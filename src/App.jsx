@@ -1,9 +1,9 @@
 import './App.css'
-import Header from './components/Header'
-import GetArticles from './components/GetArticles'
-import GetArticleByID from './components/GetArticleByID'
+import Header from './components/Header/Header'
+import ArticlesListPage from './pages/ArticlesListPage/ArticlesListPage'
+import ArticlePage from './pages/ArticlePage/ArticlePage'
 import { Routes, Route } from 'react-router-dom'
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar/NavBar'
 
 const App = () => {
 
@@ -12,8 +12,8 @@ const App = () => {
       <Header />
       <NavBar />
       <Routes>
-        <Route path="/" element={<GetArticles />} />
-        <Route path="/articles/:article_id" element={<GetArticleByID />} />
+        <Route path="/" element={<ArticlesListPage />} />
+        <Route path="/articles/:article_id" element={<ArticlePage />} />
       </Routes>
     </div>
   )
