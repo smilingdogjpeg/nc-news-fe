@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { voteUpdater } from "../utils";
+import { voteUpdater } from "../api";
 
 function Voter({ id, type, votes }) {
   const [optimisticVotes, setOptimisticVotes] = useState(0)
