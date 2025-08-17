@@ -20,7 +20,7 @@ function ArticlesListPage() {
 
     return (
         <div className="articles-container">
-            <h2>Recent Articles:</h2>
+            <h2>Recent Articles</h2>
             <ul className="articles-list">
                 {articles.map((article) => {
                    const formattedDate = formatDate(article.created_at)

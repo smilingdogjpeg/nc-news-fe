@@ -1,0 +1,27 @@
+.topics-container {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.topics-list {
+    list-style: none;
+    padding: 0;
+}
+
+.topics-card{
+     border: 1px solid #535353;
+    border-radius: 9px;
+    padding: 1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-bottom: 1rem;
+    background-color: #bae6be;
+}
+
+.topic-name {
+     font-size: 1.2rem;
+    font-weight: bold;
+    color: #666;
+    text-wrap: pretty;
+    padding: 2rem;
+}

@@ -4,6 +4,7 @@ import ArticlesListPage from './pages/ArticlesListPage/ArticlesListPage'
 import ArticlePage from './pages/ArticlePage/ArticlePage'
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
+import TopicsPage from './pages/TopicsPage/TopicsPage'
 
 const App = () => {
 
@@ -12,8 +13,9 @@ const App = () => {
       <Header />
       <NavBar />
       <Routes>
-        <Route path="/" element={<ArticlesListPage />} />
-        <Route path="/articles/:article_id" element={<ArticlePage />} />
+        <Route path="/" element={<ArticlesListPage/>} />
+        <Route path="/articles/:article_id" element={<ArticlePage/>} />
+        <Route path="/topics" element={<TopicsPage/>}/>
       </Routes>
     </div>
   )
